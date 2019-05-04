@@ -37,7 +37,7 @@ if [ ! -d '/usr/local/bin' ]; then
 fi
 
 curl -s -L https://raw.githubusercontent.com/azohra/shipyard/master/shipyard --output /usr/local/bin/shipyard || print_copy_err
-echo "Your all set to ⛵ #SetSail"
+echo "⛵You are ready to #SetSail with Shipyard"
 chmod u+x /usr/local/bin/shipyard 2> /dev/null || print_chmod_err
 echo $PATH | grep "[:^]/usr/local/bin[:$]" || print_path_err()
 
