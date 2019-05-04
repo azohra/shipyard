@@ -1,13 +1,9 @@
-.PHONY: all exec test docs
+.PHONY: all exec test
 
-all: exec binary docs test   
+all: exec test   
 
 exec:
-	@chmod u+x src/*.sh
+	@chmod u+x shipyard
 
 test:
-	@shellcheck ./shipyard
-	@shellcheck ./src/*.sh
-
-binary:
-	@./src/binary.sh
+	@shellcheck shipyard

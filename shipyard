@@ -18,12 +18,12 @@ log () {
 announce () {
     local header=${1} 
     local message=${2}
-    echo -e "${C_GREEN}${message%::*}:${C_BLUE} ${message#*::} ${C_REG}"
+    echo -e "${C_GREEN}${header%::*}:${C_BLUE} ${message#*::} ${C_REG}"
 } 
 
-parse_config() {
+load_config() {
     # Check for YML
-    if [[ "${yml_location}" =~ ${url_regex} ]]; then $(curl -s "${yml_location}"); fi
+    if [[ "${yml_location}" =~ ${url_regex} ]]; then curl -s "${yml_location}"; fi
     if [ -f "${yml_location}" ]; then announce "Config" "${yml_location}";else log "Config not found" && exit 2;  fi
 }
 
@@ -43,9 +43,10 @@ ask_permission () {
     done
 }
 
-shipyard () {
+create_ships () {
     echo "WE SHIPPIN"
 }
+
 function usage {
     echo -e "\\nUsage: ${app_name} [flags]\\n"
     echo "flags:"
@@ -88,4 +89,6 @@ while [ $# -gt 0 ] ; do
     esac
     shift
 done
-parse_config
+load_config
+ask_permission "Are you ready to build a ship?"
+create_ships
