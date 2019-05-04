@@ -1,0 +1,25 @@
+ships:
+
+  uss-gamble: # Complex
+    users:
+      - {email: justin@azohra.com,   role: admin}
+      - {email: richard@azohra.com,  role: developer}
+      - {email: frank@azohra.com,    role: viewer}
+    helm:
+      plugins:
+        gcs: https://github.com/nouney/helm-gcs
+      chart_repos:
+        azohra: gs://azohra-charts-repo
+      charts:
+        - stable/grafana
+        - azohra/strapped
+    labels:
+      istio-injection: enabled
+    clusters:
+      - {name: pearl-harbour, project: azohra, region: us-east1}
+ 
+  uss-condor: # Simple
+    users:
+      - {email: frank@azohra.com, role: admin}
+    clusters:
+      - {name: pearl-harbour, project: azohra, region: us-east1}

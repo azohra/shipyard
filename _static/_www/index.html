@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Shipyard, shipyard, Azohra, azohra">
+    <meta name="author" content="Azohra">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Shipyard</title>
+</head>
+
+<body>
+    <!-- Site header, include logo and possibly some text -->
+    <header>
+        <div class="banner">
+            <img class="block lead center" src="https://raw.githubusercontent.com/azohra/shipyard/master/_static/img/logo-black.png">
+        </div>
+    </header>
+
+    <!-- Terminal window -->
+    <div class="container scale-up-center">
+        <div class="bar">
+            <div class="butt bg-red"></div>
+            <div class="butt bg-yellow"></div>
+            <div class="butt bg-green"></div>
+        </div>
+        <!-- Tab bar -->
+        <div class="tab">
+            <button id="initial" class="window-links" onclick="openTab(event, 'tab1')">~ - shipyard</button>
+            <button class="window-links" onclick="openTab(event, 'tab2')">~ - vim config.yml</button>
+        </div>
+
+        <!-- Window that contains the script execution -->
+        <div id="tab1" class="window">
+            <div class="block center">
+                <div class="console">
+                    <span class="prompt">> </span>
+                    <span class="command"> curl https://install.shipyard.azohra.com | sh</span><br>
+                    <span class="prompt">⛵ #SetSail</span><br><br>
+                    <span class="prompt">> </span>
+                    <span class="command"> shipyard --auto -y config.yml</span><br><br>
+                    <span class="command">Using Config From: </span>
+                    <span class="accent">config.yml</span><br>
+                    <span class="command">Creating Ships </span>
+                    <span class="command">Ship: </span>
+                    <span class="accent">uss-gamble in pearl-harbour</span><br>
+                    <span class="prompt">🔨 setting up IAM</span><br>
+                    <span class="prompt">🔨 creating namespace</span><br>
+                    <span class="prompt">🔨 creating users</span><br>
+                    <span class="prompt">🔨 installing helm</span><br>
+                    <span class="prompt">🔨 installing helm plugins</span><br>
+                    <span class="prompt">🔨 installing helm repos</span><br>
+                    <span class="prompt">🔨 installing helm charts</span><br>
+                    <span class="prompt">🔨 installing tiller</span><br><br>
+                    <span class="command">Ship: </span>
+                    <span class="accent">uss-condor in pearl-harbour</span><br>
+                    <span class="prompt">🔨 setting up IAM</span><br>
+                    <span class="prompt">🔨 creating namespace</span><br>
+                    <span class="prompt">🔨 creating users</span><br>
+                    <span class="prompt pulse">></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Window that contains the contents of shipyard_config -->
+        <div id="tab2" class="window">
+            <div class="block center">
+                <div class="body console">
+                    <span class="highlight pulse">~</span><br>
+                    <span class="command">ships:</span><br><br>
+                    <span class="command indent-1">uss-gamble:</span><br>
+                    <span class="command indent-2">users:</span><<br>
+                    <span class="prompt indent-2"> - { email:justin@azohra.com,   role: admin}</span><br>
+                    <span class="prompt indent-2"> - { email:richard@azohra.com,  role: developer}</span><br>
+                    <span class="prompt indent-2"> - { email:frank@azohra.com,    role: viewer}</span><br>
+                    <span class="command indent-1">helm:</span><br>
+                    <span class="command indent-2">plugins:</span><br>
+                    <span class="command indent-3">gcs:</span><span class="prompt"> https://github.com/nouney/helm-gcs</span><br>
+                    <span class="command indent-2">chart_repos:</span><br>
+                    <span class="command indent-3">azohra:</span><span class="prompt"> gs://azohra-charts-repo</span><br>
+                    <span class="command indent-2">charts:</span><br>
+                    <span class="prompt indent-3">- stable/grafana</span><br>
+                    <span class="prompt indent-3">- azohra/strapped</span><br>
+                    <span class="command indent-1">labels:</span><br>
+                    <span class="command indent-2">istio-injection:</span><span class="prompt"> enabled</span><br>
+                    <span class="command indent-1">clusters:</span><br>
+                    <span class="prompt indent-2"> - {name: pearl-harbour, project: azohra, region: us-east1}</span><br><br>
+
+                    <span class="command indent-1">uss-condor:</span><br>
+                    <span class="command indent-2">users:</span><<br>
+                    <span class="prompt indent-2"> - { email:frank@azohra.com,    role: admin}</span><br>
+                    <span class="command indent-1">clusters:</span><br>
+                    <span class="prompt indent-2"> - {name: pearl-harbour, project: azohra, region: us-east1}</span><br>
+                    <span class="accent">~</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Middle content and links -->
+    <div class="container">
+        <h3>A pure bash bootstrap for your system</h3>
+        <div class="row">
+            <a href="https://github.com/azohra/shipyard">
+                <img class="row-img-small" src="logos/github.svg">
+            </a>
+            <a href="https://docs.shipyard.azohra.com">
+                <img class="row-img-small" src="logos/docs.svg">
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer content and links -->
+    <footer>
+        <h3>Made with ❤️ by the developers at</h3>
+        <a href="https://azohra.com">
+            <img class="item center" src="logos/black.png">
+        </a>
+    </footer>
+</body>
+
+</html>
+
+<script>
+    function openTab(evt, tabName) {
+        // Declare all variables
+        var i, tabcontent, tablinks;
+
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("window");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.getElementsByClassName("window-links");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    document.getElementById("initial").click();
+</script>
