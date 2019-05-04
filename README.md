@@ -12,7 +12,7 @@ Opinionated soft multitenancy for GKE.
 
 At a high level, Shipyard is a namespace orchestrator. It aims to configure clusters with IAM & namespace bounded resources so that teams can safely binpack their workloads on the same compute instances. Simply write a `yml` configuration file and let Shipyard do the rest.
 
-An example of a full `shipyard.yml` [here](https://gist.github.com/MatthewNielsen27/92b7c99e8c5b6632e977539110301def).
+An example of a full `shipyard.yml` [here](shipyard.yml).
 
 ⛵ #SetSail 
 
