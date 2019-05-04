@@ -42,7 +42,7 @@
                     <span class="command"> shipyard --auto -y config.yml</span><br><br>
                     <span class="command">Using Config From: </span>
                     <span class="accent">config.yml</span><br>
-                    <span class="command">Creating Ships </span>
+                    <span class="command">Creating Ships </span><br>
                     <span class="command">Ship: </span>
                     <span class="accent">uss-gamble in pearl-harbour</span><br>
                     <span class="prompt">🔨 setting up IAM</span><br>
@@ -71,9 +71,9 @@
                     <span class="command">ships:</span><br><br>
                     <span class="command indent-1">uss-gamble:</span><br>
                     <span class="command indent-2">users:</span><<br>
-                    <span class="prompt indent-2"> - { email:justin@azohra.com,   role: admin}</span><br>
-                    <span class="prompt indent-2"> - { email:richard@azohra.com,  role: developer}</span><br>
-                    <span class="prompt indent-2"> - { email:frank@azohra.com,    role: viewer}</span><br>
+                    <span class="prompt indent-3"> - { email:justin@azohra.com,   role: admin}</span><br>
+                    <span class="prompt indent-3"> - { email:richard@azohra.com,  role: developer}</span><br>
+                    <span class="prompt indent-3"> - { email:frank@azohra.com,    role: viewer}</span><br>
                     <span class="command indent-1">helm:</span><br>
                     <span class="command indent-2">plugins:</span><br>
                     <span class="command indent-3">gcs:</span><span class="prompt"> https://github.com/nouney/helm-gcs</span><br>
@@ -89,7 +89,7 @@
 
                     <span class="command indent-1">uss-condor:</span><br>
                     <span class="command indent-2">users:</span><<br>
-                    <span class="prompt indent-2"> - { email:frank@azohra.com,    role: admin}</span><br>
+                    <span class="prompt indent-3"> - { email:frank@azohra.com,    role: admin}</span><br>
                     <span class="command indent-1">clusters:</span><br>
                     <span class="prompt indent-2"> - {name: pearl-harbour, project: azohra, region: us-east1}</span><br>
                     <span class="accent">~</span>
@@ -100,7 +100,7 @@
 
     <!-- Middle content and links -->
     <div class="container">
-        <h3>A pure bash bootstrap for your system</h3>
+        <h3>Opinionated Soft Multitenancy for GKE</h3>
         <div class="row">
             <a href="https://github.com/azohra/shipyard">
                 <img class="row-img-small" src="logos/github.svg">
