@@ -35,7 +35,10 @@ print_path_err() {
 if [ ! -d '/usr/local/bin' ]; then
   mkdir /usr/local/bin 2> /dev/null || print_folder_err
 fi
+
 curl -s -L https://raw.githubusercontent.com/azohra/shipyard/master/shipyard --output /usr/local/bin/shipyard || print_copy_err
 echo "Your all set to ⛵ #SetSail"
 chmod u+x /usr/local/bin/shipyard 2> /dev/null || print_chmod_err
 echo $PATH | grep "[:^]/usr/local/bin[:$]" || print_path_err()
+
+#done
