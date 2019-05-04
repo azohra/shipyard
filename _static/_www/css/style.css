@@ -157,7 +157,7 @@ nav {
 
 .banner {
   display: inline-block;
-  width: 50vw;
+  width: 5vw;
   text-align: center;
 }
 
@@ -322,7 +322,7 @@ span {
 }
 
 .row-img-small {
-  width: 16vw;
+  width: 5vw;
   height: auto;
   margin: auto;
 }
@@ -375,7 +375,7 @@ a {
   }
 
   .banner {
-    width: 80vw;
+    width: 5vw;
   }
 
   .nav {
