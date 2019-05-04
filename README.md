@@ -21,7 +21,7 @@ An example of a full `shipyard.yml` [here](shipyard.yml).
 To install Shipyard, simply run this command:
 
 ```console
-curl -s https://install.shipyard.azohra.com | sh
+curl -s https://get.shipyard.azohra.com | sh
 ```
 
 Upgrading Shipyard can be done by re-running the installation command above or by issuing the following command in our cli:
