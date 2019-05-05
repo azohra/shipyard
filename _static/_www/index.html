@@ -14,7 +14,7 @@
     <!-- Site header, include logo and possibly some text -->
     <header>
         <div class="banner">
-            <img class="block lead center" src="logos/logo-black-1200px.png">
+            <img class="block lead center" src="logos/logo-lower-800.png">
         </div>
     </header>
     <!-- Terminal window -->
@@ -34,24 +34,20 @@
         <div id="tab1" class="window">
             <div class="block center">
                 <div class="console">
-                    <span class="prompt">> </span>
+                    <br><span class="prompt">> </span>
                     <span class="command"> curl https://get.shipyard.azohra.com | sh</span><br>
                     <span class="prompt">⛵ #SetSail</span><br><br>
                     <span class="prompt">> </span>
                     <span class="command"> shipyard --auto -y config.yml</span><br><br>
                     <span class="command">Using Config From: </span>
                     <span class="accent">config.yml</span><br>
-                    <span class="command">Creating Ships </span><br>
+                    <span class="command">Creating Ships </span><br><br>
                     <span class="command">Ship: </span>
                     <span class="accent">uss-gamble in pearl-harbour</span><br>
                     <span class="prompt">🔨 setting up IAM</span><br>
                     <span class="prompt">🔨 creating namespace</span><br>
                     <span class="prompt">🔨 creating users</span><br>
-                    <span class="prompt">🔨 installing helm</span><br>
-                    <span class="prompt">🔨 installing helm plugins</span><br>
-                    <span class="prompt">🔨 installing helm repos</span><br>
-                    <span class="prompt">🔨 installing helm charts</span><br>
-                    <span class="prompt">🔨 installing tiller</span><br><br>
+                    <span class="prompt">🔨 installing helm</span><br><br>
                     <span class="command">Ship: </span>
                     <span class="accent">uss-condor in pearl-harbour</span><br>
                     <span class="prompt">🔨 setting up IAM</span><br>
@@ -72,7 +68,6 @@
                     <span class="command indent-2">users:</span><<br>
                     <span class="prompt indent-3"> - { email:justin@azohra.com,   role: admin}</span><br>
                     <span class="prompt indent-3"> - { email:richard@azohra.com,  role: developer}</span><br>
-                    <span class="prompt indent-3"> - { email:frank@azohra.com,    role: viewer}</span><br>
                     <span class="command indent-1">helm:</span><br>
                     <span class="command indent-2">plugins:</span><br>
                     <span class="command indent-3">gcs:</span><span class="prompt"> https://github.com/nouney/helm-gcs</span><br>
@@ -80,7 +75,6 @@
                     <span class="command indent-3">azohra:</span><span class="prompt"> gs://azohra-charts-repo</span><br>
                     <span class="command indent-2">charts:</span><br>
                     <span class="prompt indent-3">- stable/grafana</span><br>
-                    <span class="prompt indent-3">- azohra/strapped</span><br>
                     <span class="command indent-1">labels:</span><br>
                     <span class="command indent-2">istio-injection:</span><span class="prompt"> enabled</span><br>
                     <span class="command indent-1">clusters:</span><br>
