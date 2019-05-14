@@ -1,4 +1,4 @@
-[![logo](https://raw.githubusercontent.com/azohra/shipyard/master/_staic/img/logo-black.png)](https://shipyard.azohra.com)
+[![logo](https://raw.githubusercontent.com/azohra/shipyard/master/_static/img/glyph-black-300px.png)](https://shipyard.azohra.com)
 
 - [Home](/)
 - [Guide](README.md)
