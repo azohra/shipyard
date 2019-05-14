@@ -1,4 +1,4 @@
-![logo](_static/img/logo-lower-300.png)
+![logo](https://raw.githubusercontent.com/azohra/shipyard/master/_static/img/logo-lower-300.png)
 
 [![Build Status](https://travis-ci.org/azohra/shipyard.svg?branch=master)](https://travis-ci.org/azohra/shipyard)![License](https://img.shields.io/github/license/azohra/shipyard.svg)![Issues](https://img.shields.io/github/issues/azohra/shipyard.svg)
 
