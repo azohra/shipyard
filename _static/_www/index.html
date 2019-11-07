@@ -3,18 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="keywords" content="Shipyard, shipyard, Azohra, azohra">
+    <meta name="keywords" content="gial, gial, Azohra, azohra">
     <meta name="author" content="Azohra">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <title>Shipyard</title>
+    <title>gial</title>
 </head>
 
 <body>
     <!-- Site header, include logo and possibly some text -->
     <header>
         <div class="banner">
-            <img class="block lead center" src="logos/logo-lower-800.png">
+            <img class="block lead center" src="logos/gial_name.png">
         </div>
     </header>
     <!-- Terminal window -->
@@ -26,7 +26,7 @@
         </div>
         <!-- Tab bar -->
         <div class="tab">
-            <button id="initial" class="window-links" onclick="openTab(event, 'tab1')">~ - shipyard</button>
+            <button id="initial" class="window-links" onclick="openTab(event, 'tab1')">~ - gial</button>
             <button class="window-links" onclick="openTab(event, 'tab2')">~ - vim config.yml</button>
         </div>
 
@@ -35,21 +35,28 @@
             <div class="block center">
                 <div class="console">
                     <br><span class="prompt">> </span>
-                    <span class="command"> curl https://get.shipyard.azohra.com | sh</span><br>
+                    <span class="command"> curl https://get.gial.azohra.com | sh</span><br>
                     <span class="prompt">⛵ #SetSail</span><br><br>
                     <span class="prompt">> </span>
-                    <span class="command"> shipyard --auto -y config.yml</span><br><br>
+                    <span class="command"> gial --auto -y config.yml</span><br><br>
                     <span class="command">Using Config From: </span>
-                    <span class="accent">config.yml</span><br>
-                    <span class="command">Creating Ships </span><br><br>
-                    <span class="command">Ship: </span>
-                    <span class="accent">uss-gamble in pearl-harbour</span><br>
+                    <span class="accent">gial.yml</span><br>
+                    <span class="command">Creating Projects</span><br>
+                    <span class="accent">- Hoth</span><br>
+                    <span class="accent">- Yavin</span><br>
+                    <span class="command">Creating Clusters</span><br>
+                    <span class="accent">- X-Wing (Hoth, Yavin)</span><br>
+                    <span class="accent">- Y-Wing (Yavin)</span><br>
+                    <span class="accent">- Star Cruiser (Yavin)</span><br>
+                    <span class="command">Configuring Clusters</span><br><br>
+                    <span class="command">X-Wing:</span>
+                    <span class="accent">azohra-dev</span><br>
                     <span class="prompt">🔨 setting up IAM</span><br>
                     <span class="prompt">🔨 creating namespace</span><br>
                     <span class="prompt">🔨 creating users</span><br>
-                    <span class="prompt">🔨 installing helm</span><br><br>
-                    <span class="command">Ship: </span>
-                    <span class="accent">uss-condor in pearl-harbour</span><br>
+                    <span class="prompt">🔨 installing tiller w/ TLS</span><br><br>
+                    <span class="command">dreadnaught (gke):</span>
+                    <span class="accent">azohra-prod</span><br>
                     <span class="prompt">🔨 setting up IAM</span><br>
                     <span class="prompt">🔨 creating namespace</span><br>
                     <span class="prompt">🔨 creating users</span><br>
@@ -58,12 +65,12 @@
             </div>
         </div>
 
-        <!-- Window that contains the contents of shipyard_config -->
+        <!-- Window that contains the contents of gial_config -->
         <div id="tab2" class="window">
             <div class="block center">
                 <div class="body console">
                     <span class="highlight pulse">~</span><br>
-                    <span class="command">ships:</span><br><br>
+                    <span class="command">cabins:</span><br><br>
                     <span class="command indent-1">uss-gamble:</span><br>
                     <span class="command indent-2">users:</span><<br>
                     <span class="prompt indent-3"> - { email:justin@azohra.com,   role: admin}</span><br>
@@ -94,10 +101,10 @@
     <div class="container">
         <h3>Opinionated Multitenancy for GKE</h3>
         <div class="row">
-            <a href="https://github.com/azohra/shipyard">
+            <a href="https://github.com/azohra/gial">
                 <img class="row-img-small" src="logos/github.svg">
             </a>
-            <a href="https://docs.shipyard.azohra.com">
+            <a href="https://docs.gial.azohra.com">
                 <img class="row-img-small" src="logos/docs.svg">
             </a>
         </div>
